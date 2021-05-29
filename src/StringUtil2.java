@@ -64,7 +64,7 @@ public class StringUtil2
 				System.out.print(trim("   Hola Mundo!   "));
 				break;
 				case 11:
-				System.out.print(indexOfN("5",'0',3));
+				System.out.print(indexOfN("Jhon|Paul|lGeorge|Ringo",'|',3));
 				break;
                 default:
                     System.out.println("No hay ejercicios asociados a esa Opción");
@@ -213,14 +213,36 @@ public class StringUtil2
 	//Retorna la posicion de la n-ésima
 	//ocurrencia del carácter c dentro de s,
 	//o -1 si s no contiene a c
-	//por ejemplo, si s = "JhonPaul|lGeorge|Ringo",
+	//por ejemplo, si s = "Jhon|Paul|lGeorge|Ringo",
 	//c = '|' y n =2, la función debe retornar la posición
 	//de la segunda ocurrencia del carácter '|' (pipe) dentro de la 
 	//cadena s. Que, en este caso es el 9
 	public static int indexOfN(String s, char c, int n)
 	{
+		int charCount = 0;
+		String arr[];
+		arr = new String[s.length()];
 		
-		return 0;
+		if (s.contains(""+c)) {
+			for (int i = 0; i < s.length(); i++) {
+				char letra = s.charAt(i);
+				if (letra == ' ') 
+					continue;
+
+				if(letra == c)
+				{
+					arr[charCount] = Integer.toString(i);
+					charCount++;
+
+				}
+			}
+		}
+
+		if (charCount >= n) {
+			System.out.println(arr[n-1]);
+			return Integer.parseInt(arr[n-1]);
+		}
+		return -1;
 	}
 
 	public static void Separador()

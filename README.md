@@ -42,4 +42,4 @@ ocurrencia del carácter c dentro de s, o -1 si s no contiene a c. Por ejemplo, 
 segunda ocurrencia del carácter ‘|’ (pipe) dentro de la cadena s. Que, en este caso, es: 9.
 
 
-- [ ] Completado
+- [x] Completado
