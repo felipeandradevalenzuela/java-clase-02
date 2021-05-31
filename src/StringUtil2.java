@@ -1,6 +1,12 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+import FiguraGeometrica.Circulo;
+import FiguraGeometrica.FiguraGeometrica;
+import FiguraGeometrica.Rectangulo;
+import FiguraGeometrica.Triangulo;
+import FiguraGeometrica.fgUtil;
+
 public class StringUtil2
 {
 	public static void main(String[] args)
@@ -9,6 +15,11 @@ public class StringUtil2
 		int[] intNumbArray = {1,2,3,4};
 		String[] stringNumbArray = {"1","2","3","4"};
 		String[] stringWordArray = {"Hola","mi","nombre","es","Felipee"};
+		FiguraGeometrica[] fgArray = new FiguraGeometrica[3];
+		fgArray[0] = new Circulo(0);
+		fgArray[1] = new Rectangulo(5,10);
+		fgArray[2] = new Triangulo(2,6);
+
         int opc = 1;
 		Scanner scanner = new Scanner(System.in);
         // while(opc == 1)
@@ -71,6 +82,9 @@ public class StringUtil2
             }
         // }
         scanner.close();
+
+		//Figura geometrica Util
+		System.out.println("El area promedio de este arreglo es: "+fgUtil.areaPromedio(fgArray));
 	}
 	// Retorna una cadena compuesta por n caracteres c
 	// Ejemplo: replicate('x',5) ==> 'xxxxx'
