@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 import FiguraGeometrica.Circulo;
@@ -22,8 +21,8 @@ public class StringUtil2
 
         int opc = 1;
 		Scanner scanner = new Scanner(System.in);
-        // while(opc == 1)
-        // {
+        while(opc == 1)
+        {
             System.out.println("=============================================");
             System.out.println("1) replicate ");
             System.out.println("2) lpad ");
@@ -80,7 +79,7 @@ public class StringUtil2
                 default:
                     System.out.println("No hay ejercicios asociados a esa Opción");
             }
-        // }
+        }
         scanner.close();
 
 		//Figura geometrica Util

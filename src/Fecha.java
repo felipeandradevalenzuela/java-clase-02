@@ -33,7 +33,7 @@ public class Fecha {
 
     public void sumDay()
     {
-        this.calendario.add(calendario.DATE, 1);
+        this.calendario.add(Calendar.DATE, 1);
     }
 
 }
